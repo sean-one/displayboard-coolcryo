@@ -1,7 +1,13 @@
 body {
-    background-color: green;
+    /* background-color: #003366; */
+    color: #4DA6FF;
+    background-image: url(../images/tundra-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.csstest {
-    color: white;
+.branding {
+    margin: 2.5%;
+    width: 14%;
 }
