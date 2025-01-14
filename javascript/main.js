@@ -1,7 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     adjustFontSize()
-    // serviceDetailRotation()
+    getImageData()
+    setInterval(serviceDetailRotation, 5000);
     // startScreenSaver();
 });
 
@@ -10,20 +11,25 @@ document.addEventListener('resize', function() {
 });
 
 const test_data_path = '../utils/before-after-test-data.json';
+const rightColumn = document.getElementById('right-column');
+const menuSections = document.getElementsByClassName('service-section')
+let imageSets = []
 
-fetch(test_data_path)
-    .then(resp => {
-        if (!resp.ok) {
-            throw new Error(`http error! status: ${resp.status}`);
-        }
-        return resp.json();
-    })
-    .then(data => {
-        console.log(data)
-    })
-    .catch(error => {
-        console.error(`error fetching json:`, error);
-    });
+function getImageData() {
+    fetch(test_data_path)
+        .then(resp => {
+            if (!resp.ok) {
+                throw new Error(`http error! status: ${resp.status}`);
+            }
+            return resp.json();
+        })
+        .then(data => {
+            imageSets = data;
+        })
+        .catch(error => {
+            console.error(`error fetching json:`, error);
+        });
+}
 
 // function startScreenSaver() {
 //     const menuDisplayTime = 15000; // 15 seconds for TESTING
@@ -135,5 +141,46 @@ function adjustFontSize() {
 
 
 function serviceDetailRotation() {
-    console.log(test_data)
+    if (imageSets.length === 0) {
+        console.warn('no image sets available yet.');
+        return;
+    }
+    rightColumn.innerHTML = '';
+
+    const randomIndex = Math.floor(Math.random() * imageSets.length);
+    const detailItem = imageSets[randomIndex];
+
+    // remove active status from all sections
+    if (menuSections.length > 0) {
+        Array.from(menuSections).forEach(section => section.classList.remove('section-active'));
+    }
+
+    const detailsContainerDiv = document.createElement('div');
+    detailsContainerDiv.className = 'details-container';
+
+    const imageWrapperDiv = document.createElement('div');
+    imageWrapperDiv.className = `image-wrapper ${detailItem['aspect-layout']}`;
+
+    const beforeImage = document.createElement('img');
+    beforeImage.className = `${detailItem['aspect-layout']}-layout`;
+    beforeImage.src = detailItem['before-image'];
+
+    const afterImage = document.createElement('img');
+    afterImage.className = `${detailItem['aspect-layout']}-layout`;
+    afterImage.src = detailItem['after-image'];
+
+    const descriptionDiv = document.createElement('div');
+    descriptionDiv.className = 'description';
+    descriptionDiv.textContent = detailItem['service-details'];
+
+    imageWrapperDiv.appendChild(beforeImage);
+    imageWrapperDiv.appendChild(afterImage);
+
+    detailsContainerDiv.appendChild(imageWrapperDiv);
+    detailsContainerDiv.appendChild(descriptionDiv);
+
+    const menuSectionDiv = document.getElementById(`${detailItem['service-name']}`)
+    menuSectionDiv.classList.add('section-active');
+    
+    rightColumn.appendChild(detailsContainerDiv);   
 }
