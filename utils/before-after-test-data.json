@@ -1,0 +1,44 @@
+[
+  {
+    "service-name": "slimming-toning",
+    "before-image": "https://picsum.photos/600/800",
+    "after-image": "https://picsum.photos/600/800",
+    "aspect-layout": "portrait",
+    "service-details": "Veniam minim nulla id magna non incididunt duis eu sunt quis exercitation cupidatat sit tempor. Incididunt deserunt est esse cillum sit velit commodo elit quis laboris laborum aute aliquip dolore. Quis aute non aliquip voluptate nulla exercitation amet ullamco dolor sunt. Laboris elit proident officia cupidatat ad voluptate non ex Lorem. Cillum esse cupidatat esse eiusmod sit reprehenderit amet nulla. Veniam aliqua non excepteur est incididunt magna velit."
+  },
+  {
+    "service-name": "facials",
+    "before-image": "https://picsum.photos/600/800",
+    "after-image": "https://picsum.photos/600/800",
+    "aspect-layout": "portrait",
+    "service-details": "Nostrud ipsum mollit consequat est reprehenderit ullamco. Mollit ipsum amet officia velit consectetur commodo minim aute minim exercitation nulla pariatur. Do commodo incididunt duis magna. Est do excepteur fugiat dolor. Eiusmod deserunt deserunt ex enim et aliqua est. Veniam nisi dolore laboris non incididunt esse ad sit dolore exercitation elit ex esse sit. Ut voluptate esse culpa et labore fugiat."
+  },
+  {
+    "service-name": "soothe",
+    "before-image": "https://picsum.photos/600/800",
+    "after-image": "https://picsum.photos/600/800",
+    "aspect-layout": "portrait",
+    "service-details": "Ea id deserunt Lorem magna id nostrud aliqua non Lorem occaecat officia veniam et. Ut id ipsum voluptate nostrud fugiat. Enim qui velit eu aute. Eiusmod duis ad pariatur laboris elit amet sint ut do. Mollit ipsum et officia adipisicing consectetur. Reprehenderit labore ut incididunt velit. Elit pariatur sunt occaecat id ut commodo id ut nulla consequat exercitation cillum dolore."
+  },
+  {
+    "service-name": "slimming-toning",
+    "before-image": "https://picsum.photos/800/600",
+    "after-image": "https://picsum.photos/800/600",
+    "aspect-layout": "landscape",
+    "service-details": "Id proident laboris do proident deserunt qui deserunt ipsum anim velit. Nostrud Lorem laboris non et velit sit pariatur dolor labore ipsum sint ad commodo incididunt. Laborum consectetur ipsum amet in aliquip aliquip laboris enim est quis labore esse occaecat esse. Elit nulla esse esse aliquip irure cillum in nostrud laborum officia. Incididunt ex sunt est aliquip. Veniam mollit incididunt occaecat nostrud et elit do voluptate tempor tempor."
+  },
+  {
+    "service-name": "facials",
+    "before-image": "https://picsum.photos/800/600",
+    "after-image": "https://picsum.photos/800/600",
+    "aspect-layout": "landscape",
+    "service-details": "Dolor anim id ad proident nostrud ut. Nulla proident ex laborum fugiat aliquip et fugiat ex consectetur irure dolore exercitation. Commodo ipsum veniam consequat reprehenderit aliqua cupidatat laborum laborum deserunt ut excepteur dolore. Minim deserunt quis eiusmod non ex consequat veniam eu minim. In duis id irure amet nostrud."
+  },
+  {
+    "service-name": "soothe",
+    "before-image": "https://picsum.photos/800/600",
+    "after-image": "https://picsum.photos/800/600",
+    "aspect-layout": "landscape",
+    "service-details": "Ea magna fugiat ad nulla sunt nulla id consectetur. Laborum reprehenderit voluptate do labore. Ullamco ipsum deserunt nulla adipisicing in minim eu ut consequat sunt ad. Commodo aliquip minim enim ullamco Lorem officia eu consectetur sint."
+  }
+]

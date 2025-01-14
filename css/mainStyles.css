@@ -1,6 +1,4 @@
 body {
-    /* background-color: #003366; */
-    /* color: #25aae1; */
     color: #243952;
     background-image: url(../images/tundra-background.png);
     background-size: cover;
@@ -8,93 +6,165 @@ body {
     background-repeat: no-repeat;
 }
 
-.container {
+#display-container {
     width: 100%;
     height: 100%;
     display: flex;
-}
-
-.branding {
-    padding: 3rem;
-    width: 40rem;
-    /* border: 2px solid red; */
-}
-
-.menu-wrapper {
-    width: 100%;
-    /* height: 100%; */
-    margin: 10rem 5rem;
-    padding: 3rem 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    justify-content: center;
     border-radius: 1.5rem;
-    /* background-color: rgba(179,216,246,0.4); */
-    background-color: rgba(250,251,247,0.5);
 }
 
-.menu-column {
-    margin: 0 0.5rem;
-    padding: 5rem 2rem;
-    /* background-color: white; */
+#left-column {
     width: 100%;
-    border-radius: 1rem;
-    /* border: 0.2rem solid #0f75bc; */
+    max-width: 40vw;
+}
+
+#branding-container {
+    padding: 1rem;
+    height: 20vh;
+}
+
+#branding-container img {
+    max-height: 100%;
+    display: block;
+}
+
+#right-column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(179,216,246, 0.8);
+}
+
+.service-section {
+    margin: 0rem 2.5rem;
+    border-radius: 1.5rem;
+    background-color: rgba(250, 251, 247, 0.5);
 }
 
 .service-header {
     color: #000000;
     padding: 0 0 0 1.5rem;
-    font-weight: bold;
-    font-size: 2.5rem;
-    line-height: 2;
-    margin: 0.5rem 0;
-    text-transform: uppercase;
-    /* background: linear-gradient(to bottom, #25aae1, #ffffff); */
-    /* background-color: #25aae1; */
-    /* border: 1px solid red; */
 }
 
-.product-line {
-    font-size: 1.8rem;
+.service-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.service-info {
+    font-size: 2rem;
+}
+
+.service-subheader {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.04rem;
+    padding-left: 1.5rem;
+}
+
+.section-active {
+    border-radius: 1.5rem 0 0 1.5rem;
+    margin: 0.75rem 0 0.75rem 5rem;
+}
+
+.section-active .service-header {
+    width: 100%;
+    padding-right: 0.5rem;
+    border-radius: 1.5rem 0 0 0;
+    text-align: end;
+    background-color: rgba(179,216,246, 0.7);
+}
+
+.session-options {
+    padding: 1.5rem 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
-/* .product-price {
-    color: #fcd43f;
-} */
+.session-option {
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    display: flex;
+    border: 0.1rem solid black; 
+}
 
-.service-info {
-    font-size: 1.7rem;
-    margin: 2rem 0;
+.session-left {
+    width: 40%;
+    font-size: 3rem;
+    padding: 0 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #243952;
+}
+
+.session-right {
+    width: 100%;
+    padding: 0 1rem 0 0.5rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.session-count {
+    text-align: center;
+    color: #fcd43f;
+}
+
+.session-price {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: black;
 }
 
 .session-cost {
     font-size: 1.4rem;
-    /* color: #4b98ff; */
 }
 
-.slideshow {
-    display: none;
-    /* Hidden by default */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Dark overlay */
-    z-index: 10;
-    /* Ensure it appears above other content */
+.details-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-wrapper {
+    display: flex;
+    flex: 3;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
 }
 
-.slideshow img {
-    max-width: 90%;
-    max-height: 90%;
-    display: none;
-    /* Initially hidden */
+.image-wrapper.portrait {
+    flex-direction: row;
+}
+
+.image-wrapper.landscape {
+    flex-direction: column;
+}
+
+.image-wrapper img {
+    flex: 0 1 auto;
+    object-fit: contain;
+}
+
+.portrait-layout {
+    max-width: 55rem;
+}
+
+.landscape-layout {
+    max-height: 40rem;
+}
+
+.description {
+    flex: 1;
+    padding: 1rem;
+    margin: 2rem;
+    font-size: 2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    color: black;
 }

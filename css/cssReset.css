@@ -22,7 +22,8 @@ fieldset,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+div {
     margin: 0;
     padding: 0;
 }

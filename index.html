@@ -6,116 +6,229 @@
         <link rel="stylesheet" type="text/css" href="./css/mainStyles.css">
     </head>
     <body>
-        <div class="container">
-            <div class="branding">
-                <img src="./images/coolCryo-logo.PNG" alt="Cool Cryo" />
+        <div id="display-container">
+            <div id="left-column">
+                <div id="branding-container">
+                    <img src="./images/coolCryo-logo.PNG" alt="branding logo" />
+                </div>
+                <div id="service-board">
+                    <div id="slimming-toning" class="service-section">
+                        <div class="service-header">
+                            <div class="service-title">CryoSlimming / CryoToning</div>
+                            <div class="service-info">
+                                Slimming or toning (max 2 per month unless balance is paid in full).
+                                Payment plan options available. 
+                            </div>
+                        </div>
+                        <div class="session-options">
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">1</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSION</p>
+                                    <div class="session-price">$399</div>
+                                    <p>$399/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">5</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$1495</div>
+                                    <p>$299/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">10</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$2500</div>
+                                    <p>$250/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">20</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$4500</div>
+                                    <p>$225/ea.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="facials" class="service-section section-active">
+                        <div class="service-header">
+                            <div class="service-title">CryoFacial</div>
+                            <div class="service-info">
+                                Add-On Price: $99/session (when combined with same-day slimming or toning treatment)
+                            </div>
+                        </div>
+                        <div class="session-options">
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">1</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSION</p>
+                                    <div class="session-price">$149</div>
+                                    <p>$149/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">5</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$695</div>
+                                    <p>$139/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">10</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$1290</div>
+                                    <p>$129/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">20</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$2380</div>
+                                    <p>$119/ea.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="soothe" class="service-section">
+                        <div class="service-header">
+                            <div class="service-title">CryoSoothe Packages</div>
+                        </div>
+                        <div class="service-subheader">Single Area</div>
+                        <div class="session-options">
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">1</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSION</p>
+                                    <div class="session-price">$60</div>
+                                    <p>$60/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">10</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$500</div>
+                                    <p>$50/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">15</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$675</div>
+                                    <p>$45/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">20</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$850</div>
+                                    <p>$42.50/ea.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-subheader">Double (2 Areas)</div>
+                        <div class="session-options">
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">1</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSION</p>
+                                    <div class="session-price">$90</div>
+                                    <p>$90/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">10</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$750</div>
+                                    <p>$75/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">15</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$1020</div>
+                                    <p>$68/ea.</p>
+                                </div>
+                            </div>
+                            <div class="session-option">
+                                <div class="session-left">
+                                    <div class="session-count">20</div>
+                                </div>
+                                <div class="session-right">
+                                    <p>SESSIONS</p>
+                                    <div class="session-price">$1200</div>
+                                    <p>$60/ea.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="menu-wrapper">
-                <div class="menu-column">
-                    <div id="screen-details"></div>
-                    <div class="service-header">CryoSlimming / CryoToning</div>
-                    <div class="product-line">
-                        <p class="product-item">1 Session</p>
-                        <p class="product-price">$399</p>
+            <div id="right-column">
+                <div class="details-container">
+                    <!-- Portrait Layout -->
+                    <div class="image-wrapper portrait">
+                        <img class="portrait-layout" src="https://picsum.photos/600/800" alt="Before Portrait">
+                        <img class="portrait-layout" src="https://picsum.photos/600/800" alt="After Portrait">
                     </div>
-                    <div class="product-line">
-                        <p class="product-item">5 Sessions <span class="session-cost">($299/session)</span></p>
-                        <p class="product-price">$1495</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">10 Sessions <span class="session-cost">($250/session)</span></p>
-                        <p class="product-price">$2500</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">20 Sessions <span class="session-cost">($225/session)</span></p>
-                        <p class="product-price">$4500</p>
-                    </div>
+                
+                    <!-- Landscape Layout -->
+                    <!-- Uncomment this and comment the above to switch -->
                     
-                    <div class="service-info">
-                        <ul>Payment Plan Options:</ul>
-                        <li>8 Sessions: $2400 ($300/session)</li>
-                        <li>4 Payments of $600</li>
-                    </div>
-
-                    <p>Slimming or toning (max 2 per month unless balance is paid in full)</p>
-                </div>
-                <div class="menu-column">
-                    <div class="service-header">CryoFacial</div>
-                    <div class="product-line">
-                        <p class="product-item">Single Session</p>
-                        <p class="product-price">$149</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">5 Sessions <span class="session-cost">($139/session)</span></p>
-                        <p class="product-price">$695</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">10 Sessions <span class="session-cost">($129/session)</span></p>
-                        <p class="product-price">$1290</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">20 Sessions <span class="session-cost">($119/session)</span></p>
-                        <p class="product-price">$2380</p>
-                    </div>
-
-                    <div class="service-header">Cryo Neck/Chin Only</div>
-                    <div class="product-line">
-                        <p class="product-item">Single Session</p>
-                        <p class="product-price">$199</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">5 Sessions <span class="session-cost">($150/session)</span></p>
-                        <p class="product-price">$750</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">10 Sessions <span class="session-cost">($125/session)</span></p>
-                        <p class="product-price">$1250</p>
-                    </div>
-
-                    <div class="service-info">
-                        <p>Add-On Price: $99/session (when combined with same-day slimming or toning treatment)</p>
-                    </div>
-                </div>
-                <div class="menu-column">
-                    <div class="service-header">CryoSoothe Packages</div>
-                    <p>Single Area</p>
-                    <div class="product-line">
-                        <p class="product-item">Single Session</p>
-                        <p class="product-price">$60</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">10 Sessions <span class="session-cost">($50/session)</span></p>
-                        <p class="product-price">$500</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">15 Sessions <span class="session-cost">($45/session)</span></p>
-                        <p class="product-price">$675</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">20 Sessions <span class="session-cost">($42.50/session)</span></p>
-                        <p class="product-price">$850</p>
-                    </div>
-                    
-                    <p>Double (2 Areas)</p>
-                    <div class="product-line">
-                        <p class="product-item">Single Session</p>
-                        <p class="product-price">$90</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">10 Pack <span class="session-cost">($37.50/session)</span></p>
-                        <p class="product-price">$750</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">15 Pack <span class="session-cost">($34/session)</span></p>
-                        <p class="product-price">$1020</p>
-                    </div>
-                    <div class="product-line">
-                        <p class="product-item">20 Pack <span class="session-cost">($30/session)</span></p>
-                        <p class="product-price">$1200</p>
+                    <!-- <div class="image-wrapper landscape">
+                      <img class="landscape-layout" src="https://picsum.photos/800/600" alt="Before Landscape">
+                      <img class="landscape-layout" src="https://picsum.photos/800/600" alt="After Landscape">
+                    </div> -->
+                   
+                
+                    <div class="description">
+                        Adipisicing dolor ex est velit proident tempor reprehenderit. Excepteur pariatur labore tempor adipisicing do amet aute officia et qui. Dolore excepteur incididunt excepteur eu qui. Id occaecat ut ipsum do esse velit et duis amet eiusmod esse duis culpa reprehenderit. Labore excepteur deserunt ullamco incididunt velit aliquip exercitation mollit pariatur ea duis do dolore. Deserunt ullamco sit duis deserunt aliqua veniam officia.
                     </div>
                 </div>
             </div>
-            <div class="slideshow" id="slideshow"></div>
         </div>
         <script src="./javascript/main.js"></script>
     </body>
