@@ -35,21 +35,25 @@ function getImageData() {
 function adjustFontSize() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
-    // const pixelRatio = window.devicePixelRatio || 1;
-    const orientation = (screenWidth > screenHeight) ? 'landscape' : 'portrait';
+    const testData = document.getElementById('testData')
+    testData.innerHTML = ""
+
+    // define a reference virtual screen size
+    const virtualWidth = 1920;
+    const virtualHeight = 1080;
+
+    // calculate scaling factor based on the smaller dimension
+    const scaleFactor = Math.min(screenWidth / virtualWidth, screenHeight / virtualHeight);
+
+    // set the root font size based on this scaling facor
+    const baseFontSize = scaleFactor * 10; // 10px at scale 1
+    document.documentElement.style.fontSize = baseFontSize + 'px';
+
+    testData.innerHTML = `
+        <div>width: ${screenWidth}, height: ${screenHeight}, font: ${document.documentElement.style.fontSize}</div>
+    `
     
-    let baseFontSizePercentage;
-    
-    if (orientation === 'landscape') {
-        // baseFontSizePercentage = ((screenWidth / 1920) * 62.5) / pixelRatio;
-        baseFontSizePercentage = ((screenWidth / 1920) * 62.5);
-    } else {
-        // baseFontSizePercentage = ((screenHeight / 1920) * 62.5) / pixelRatio;
-        baseFontSizePercentage = ((screenHeight / 1920) * 62.5);
-    }
-    
-    document.documentElement.style.fontSize = baseFontSizePercentage + '%';
-    console.log(document.documentElement.style.fontSize)
+    console.log('Adjusted font size: ', document.documentElement.style.fontSize);
 }
 
 function serviceDetailRotation() {
