@@ -42,17 +42,17 @@ function adjustFontSize() {
     const virtualWidth = 1920;
     const virtualHeight = 1080;
 
-    // calculate scaling factor based on the smaller dimension
-    const scaleFactor = Math.min(screenWidth / virtualWidth, screenHeight / virtualHeight);
+    // calculate scaling factor based on the larger ratio
+    const scaleFactor = Math.max(screenWidth / virtualWidth, screenHeight / virtualHeight);
 
-    // set the root font size based on this scaling facor
-    const baseFontSize = scaleFactor * 10; // 10px at scale 1
+    // set the base root font size but prevent it from shrinking below 10px
+    const baseFontSize = Math.max(scaleFactor * 10, 10); // ensures minimum of 10px
     document.documentElement.style.fontSize = baseFontSize + 'px';
 
     testData.innerHTML = `
         <div>width: ${screenWidth}, height: ${screenHeight}, font: ${document.documentElement.style.fontSize}</div>
     `
-    
+
     console.log('Adjusted font size: ', document.documentElement.style.fontSize);
 }
 
