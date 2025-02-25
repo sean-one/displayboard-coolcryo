@@ -5,7 +5,7 @@ let imageSets = []
 let currentImageIndex = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
-    adjustFontSize()
+    setBaseMeasurement()
     getImageData().then(() => {
         serviceDetailRotation(); // immediately show the first item
         setInterval(serviceDetailRotation, 15000); // start cycling
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('resize', function() {
-    adjustFontSize()
+    setBaseMeasurement()
 });
 
 function getImageData() {
@@ -32,7 +32,7 @@ function getImageData() {
         });
 }
 
-function adjustFontSize() {
+function setBaseMeasurement() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
     const testData = document.getElementById('testData')
