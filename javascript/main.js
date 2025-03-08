@@ -1,4 +1,4 @@
-const test_data_path = '../utils/before-after-test-data.json';
+const test_data_path = '../utils/testing_data.json';
 const rightColumn = document.getElementById('right-column');
 const menuSections = document.getElementsByClassName('service-section')
 let imageSets = []
@@ -100,20 +100,23 @@ function addNewDetails(detailItem) {
     const imageWrapperDiv = document.createElement('div');
     imageWrapperDiv.className = `image-wrapper ${detailItem['aspect-layout']}`;
     
-    const beforeImage = document.createElement('img');
-    beforeImage.className = `${detailItem['aspect-layout']}-layout`;
-    beforeImage.src = detailItem['before-image'];
+    const serviceImage = document.createElement('img')
+    serviceImage.src = detailItem['service-image']
+    // const beforeImage = document.createElement('img');
+    // beforeImage.className = `${detailItem['aspect-layout']}-layout`;
+    // beforeImage.src = detailItem['before-image'];
     
-    const afterImage = document.createElement('img');
-    afterImage.className = `${detailItem['aspect-layout']}-layout`;
-    afterImage.src = detailItem['after-image'];
+    // const afterImage = document.createElement('img');
+    // afterImage.className = `${detailItem['aspect-layout']}-layout`;
+    // afterImage.src = detailItem['after-image'];
     
     const descriptionDiv = document.createElement('div');
     descriptionDiv.className = 'description';
     descriptionDiv.textContent = detailItem['service-details'];
     
-    imageWrapperDiv.appendChild(beforeImage);
-    imageWrapperDiv.appendChild(afterImage);
+    imageWrapperDiv.appendChild(serviceImage)
+    // imageWrapperDiv.appendChild(beforeImage);
+    // imageWrapperDiv.appendChild(afterImage);
     
     detailsContainerDiv.appendChild(imageWrapperDiv);
     detailsContainerDiv.appendChild(descriptionDiv);
