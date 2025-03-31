@@ -19,10 +19,10 @@ body {
     max-width: 40vw;
 }
 
-#testData {
+/* #testData {
     font-size: 2rem;
     padding: 1rem;
-}
+} */
 
 #branding-container {
     padding: 1rem;
@@ -62,24 +62,6 @@ body {
     line-height: 1.5;
 }
 
-.service-info {
-    font-size: 2rem;
-}
-
-.service-subheader {
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 0.04rem;
-    padding-left: 1.5rem;
-}
-
-.section-active {
-    border-radius: 1.5rem 0 0 1.5rem;
-    margin: 1rem 0.65rem 1rem 5rem;
-    background-color: rgba(179,216,246,0.9);
-    transform: scale(1.02);
-}
-
 .section-active .service-header {
     width: 100%;
     padding-right: 0.5rem;
@@ -91,99 +73,24 @@ body {
 }
 
 .session-options {
+    font-size: 3rem;
     padding: 1.5rem 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.session-option {
-    margin: 0 0.5rem;
-    font-size: 1.8rem;
-    display: flex;
-    border: 0.1rem solid black; 
-}
-
-.session-left {
-    width: 40%;
-    font-size: 3rem;
-    padding: 0 1.75rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #243952;
-}
-
-.session-right {
+#slideContainer {
     width: 100%;
-    padding: 0 1rem 0 0.5rem;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.session-count {
-    text-align: center;
-    color: #fcd43f;
-}
-
-.session-price {
-    font-size: 2.7rem;
-    font-weight: bold;
-    color: black;
-}
-
-.session-cost {
-    font-size: 1.4rem;
-}
-
-.details-container {
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    transform: scale(0.98);
-    opacity: 0.9;
-}
-
-.details-container.active {
-    transform: scale(1);
-    opacity: 1;
-}
-
-.image-wrapper {
-    padding: 5rem;
-    display: flex;
-    flex: 3;
-    gap: 1rem;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
 }
 
-.image-wrapper.portrait {
-    flex-direction: row;
-}
-
-.image-wrapper.landscape {
-    flex-direction: column;
-}
-
-.image-wrapper img {
-    flex: 0 1 auto;
-    object-fit: contain;
-}
-
-.portrait-layout {
-    max-width: 55rem;
-}
-
-.landscape-layout {
-    max-height: 40rem;
-}
-
-.description {
-    flex: 1;
-    padding: 1rem;
-    margin: 2rem;
-    font-size: 2rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    color: black;
+#slideContainer img {
+    display: block;
+    width: 75%;
+    height: auto;
 }
