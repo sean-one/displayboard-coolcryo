@@ -2,26 +2,23 @@ const rightColumn = document.getElementById('right-column');
 const menuSections = document.getElementsByClassName('service-section')
 let images = []
 let currentImageIndex = 0;
+let slideCounter = 0;
+const slideDelay = 10000; // 10 seconds per image
+const adDisplayTime = 15000; // 15 seconds for ad image
 
 document.addEventListener('DOMContentLoaded', function() {
     setBaseMeasurement()
     startSlideshow()
-    // getImageData().then(() => {
-    //     serviceDetailRotation(); // immediately show the first item
-    //     setInterval(serviceDetailRotation, 15000); // start cycling
-    // });
 });
 
 document.addEventListener('resize', function() {
     setBaseMeasurement()
 });
 
-// test function - gives information on the screen when needed
+// set base font size based on the screen size
 function setBaseMeasurement() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
-    // const testData = document.getElementById('testData')
-    // testData.innerHTML = ""
 
     // define a reference virtual screen size
     const virtualWidth = 1920;
@@ -34,13 +31,10 @@ function setBaseMeasurement() {
     const baseFontSize = Math.max(scaleFactor * 10, 10); // ensures minimum of 10px
     document.documentElement.style.fontSize = baseFontSize + 'px';
 
-    // testData.innerHTML = `
-    //     <div>width: ${screenWidth}, height: ${screenHeight}, font: ${document.documentElement.style.fontSize}</div>
-    // `
-
-    console.log('Adjusted font size: ', document.documentElement.style.fontSize);
+    // console.log('Adjusted font size: ', document.documentElement.style.fontSize);
 }
 
+// get list of all image src text
 async function fetchImages() {
     try {
         const response = await fetch("../images.json");
@@ -54,6 +48,8 @@ async function fetchImages() {
     }
 }
 
+// shuffle images src links and create a random order
+// none of images at the end of the previous array at the start of the new one
 function shuffleImages() {
     if (images.length < 6) {
         // If fewer than 6 images, just do a simple shuffle
@@ -90,22 +86,41 @@ function randomShuffle(array) {
 
 async function startSlideshow() {
     await fetchImages(); // load images at start up
+    const adFrequency = Math.floor(images.length/3);
 
     const imgElement = document.getElementById("slideImage")
+
+    function showAdThenResume() {
+        imgElement.src = 'images/slide_ads/care-credit.webp'
+
+        setTimeout(() => {
+            changeImage();
+        }, adDisplayTime);
+    }
 
     function changeImage() {
         if (images.length === 0) return;
 
+        if (slideCounter > 0 && slideCounter % adFrequency === 0) {
+            slideCounter++
+            showAdThenResume();
+            return;
+        }
+
         imgElement.src = images[currentImageIndex];
         currentImageIndex++;
+        console.log(`currentImageIndex: ${currentImageIndex}`)
+        slideCounter++
+        console.log(`slideCounter: ${slideCounter}`)
 
         if (currentImageIndex >= images.length) {
             // end of cycle -> reshuffle and restart
             shuffleImages();
             currentImageIndex = 0;
+            slideCounter = 0;
         }
     }
 
     changeImage(); // show first image
-    setInterval(changeImage, 3000); // change image every 3 seconds
+    setInterval(changeImage, slideDelay); // change image every 3 seconds
 }
