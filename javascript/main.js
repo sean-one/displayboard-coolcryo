@@ -109,9 +109,9 @@ async function startSlideshow() {
 
         imgElement.src = images[currentImageIndex];
         currentImageIndex++;
-        console.log(`currentImageIndex: ${currentImageIndex}`)
+        // console.log(`currentImageIndex: ${currentImageIndex}`)
         slideCounter++
-        console.log(`slideCounter: ${slideCounter}`)
+        // console.log(`slideCounter: ${slideCounter}`)
 
         if (currentImageIndex >= images.length) {
             // end of cycle -> reshuffle and restart
